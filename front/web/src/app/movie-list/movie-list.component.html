@@ -1,0 +1,24 @@
+<h1>
+Movie List
+</h1>
+<div>
+<a class="btn btn-primary" routerLink="/movie-create" routerLinkActive="active">Add New Movie</a>
+<table style="width:100%" class="table">
+<tr>
+<th>Name</th>
+<th>Genre</th>
+<th>Rating</th>
+<th>Added</th>
+<th>Action</th>
+</tr>
+<tr *ngFor="let movie of movies">
+<td> {{ movie.name }} </td>
+<td> {{ movie.type }} </td>
+<td> {{ movie.rating }}/5</td>
+<td> {{ movie.created | date }} </td>
+<td>
+<a class='btn btn-primary' routerLink='/view/{{movie.id}}' routerLinkActive="active">View</a>
+<a class='btn btn-warning' routerLink='/edit/{{movie.id}}' routerLinkActive="active">Edit</a>
+</td>
+</tr>
+</table>

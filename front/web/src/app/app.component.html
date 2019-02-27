@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <router-outlet></router-outlet>
+</div>
+
+  <div [hidden]="!loggedIn">
+<h2>Menu: </h2>
+<ul>
+  <li>   
+	<h2><a routerLink="/movie-create" routerLinkActive="active">Add New Movie</a></h2>
+  </li>
+  <li>
+    <h2><a routerLink="/movies" routerLinkActive="active">View All Movies</a></h2>
+  </li>
+  <li>
+  <button class="btn btn-warning" (click)="logout()">Logout</button>
+  </li>
+</ul>
+</div>
+
